@@ -31,12 +31,12 @@ jobs:
     with:
         cmd: install # will run `yarn install` command
           
-    - name: Build React App
-      run: yarn build
+    name: Build React App
+    run: yarn build
       
-    - name: Install Surge
-      run: npm install -g surge
+    name: Install Surge
+    run: npm install -g surge
       
-    - name: Deploy to surge
-      run: surge ./build bootcamp_arsalan.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+    name: Deploy to surge
+    run: surge ./build bootcamp_arsalan.surge.sh --token ${{ secrets.SURGE_TOKEN }}
 
